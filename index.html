@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google" content="notranslate">
+
+  <!-- Consolidated and Cleaned Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <title>KATHPENCIL Art Institute</title>
+  
+  <!-- Website Icon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Pure CSS Floating Petals -->
+  <div class="petals-container">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+  </div>
+
+  <!-- Responsive Bootstrap Header/Navbar -->
+  <nav id="mainHeader" class="navbar navbar-expand-lg fixed-top py-3">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand logo" href="index.html">
+        <img src="assets/justlogo.png" alt="Kathpencil Logo" style="height: 50px; width: auto;">
+      </a>
+
+      <div class="d-flex align-items-center order-lg-3">
+        <!-- Translate Icon -->
+        <div style="position: relative; margin-right: 15px;">
+          <img src="assets/Google_Translate_Icon.png" alt="Translate" style="width: 30px; cursor: pointer;"
+            onclick="toggleTranslateDropdown()" />
+          <div id="google_translate_element"
+            style="display: none; position: absolute; top: 40px; right: 0; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse justify-content-center order-lg-2" id="navbarNav">
+        <div class="navbar-nav gap-2 mt-3 mt-lg-0">
+          <a href="#about" class="nav-item nav-btn peach">About</a>
+          <a href="#gallery" class="nav-item nav-btn lavender">Gallery</a>
+          <a href="#events" class="nav-item nav-btn mint">Upcoming Events</a>
+          <a href="#admissions" class="nav-item nav-btn sky">Admissions</a>
+          <a href="#footer" class="nav-item nav-btn rose">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text" data-aos="fade-up"
+      style="background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.6); padding: 50px; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); max-width: 650px; position: relative; z-index: 2;">
+      <div class="hero-logo mb-4">
+        <img src="assets/logoname.png" alt="Kathpencil Logo" style="max-width: 100%; height: 100px;">
+      </div>
+      <p class="tagline">
+      <h5 style="font-family: 'Poppins', sans-serif; line-height: 1.6;">Where <span class="glow"
+          style="color:#e91e63; font-weight:600;">creativity</span> blossoms and <span class="glow"
+          style="color:#118ab2; font-weight:600;">colours</span> come alive.</h5>
+      </p>
+      <a href="#admissions" class="cta-button mt-3">Join Now!</a>
+    </div>
+  </section>
+
+  <section class="welcome" style="position: relative; z-index: 2;">
+    <img src="purple-flower.png" alt="Purple Flower" class="floating-flower"
+      style="position: absolute; top: -20px; right: -30px; width: 120px; opacity: 0.4; z-index: 1; pointer-events: none;"
+      data-aos="zoom-in" />
+    <div class="tagline-box position-relative" style="z-index: 2;">
+      <h3>Welcome to Kathpencil</h3>
+      <p>
+        A colorful space where creativity meets expression. We offer professional courses in sketching,
+        watercolors, oil painting, acrylics, and more—designed for budding artists of all ages.
+        Our mission is to nurture every student’s imagination and technique in a fun, vibrant environment.
+      </p>
+    </div>
+  </section>
+
+  <section id="courses" class="py-5" style="background: #fff9f2; overflow-x: hidden;">
+    <div class="container text-center">
+      <div class="frosted-box">
+        <h2 class="mb-5" style="color: #5c2d91;">
+          🎨 What You Can Learn at Kathpencil
+        </h2>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-4 rounded-4 shadow-sm h-100"
+              style="background: rgba(255,255,255,0.9); border-left: 5px solid #ef476f;">
+              <h4 class="fw-bold mb-2">Sketching ✏️</h4>
+              <p>
+                Learn the fundamentals of line, shading, and proportions to bring ideas to life.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="p-4 rounded-4 shadow-sm h-100"
+              style="background: rgba(255,255,255,0.9); border-left: 5px solid #118ab2;">
+              <h4 class="fw-bold mb-2">Watercolour 💧</h4>
+              <p>
+                Explore blending, layering, and vibrant transparency in painting techniques.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="p-4 rounded-4 shadow-sm h-100"
+              style="background: rgba(255,255,255,0.9); border-left: 5px solid #06d6a0;">
+              <h4 class="fw-bold mb-2">Pastel & Acrylic 🎨</h4>
+              <p>
+                Master brushwork and bold colours in both traditional and modern painting styles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section with Light Frosted Background -->
+  <section id="about" class="py-5 position-relative">
+    <div class="container text-center">
+      <div class="frosted-box">
+        <h2 class="mb-4 text-black">About Kathpencil</h2>
+        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+          <p>At <strong>KATHPENCIL</strong>, art meets imagination! Founded with a vision to inspire budding artists,
+            our
+            institute offers a vibrant and nurturing space for learners of all ages to explore the magical world of
+            drawing, painting, and visual storytelling.</p>
+          <p>Whether you're picking up a pencil for the first time or refining your skills, Kathpencil helps you grow
+            with
+            confidence and creativity.</p>
+          <p>From fundamental sketching to masterclasses in watercolor, oil, and acrylic techniques — we blend tradition
+            with experimentation. Our mentors believe in not just teaching art, but nurturing the artist in every heart.
+          </p>
+        </div>
+        <img src="assets/watercolorpalette.jpg" alt="brush" class="mt-4" style="max-width: 150px;" />
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="py-5 position-relative"
+    style="background: rgba(255,255,255,0.5); backdrop-filter: blur(5px); z-index: 1;">
+    <div class="container">
+      <h2 class="text-center mb-5">Gallery Highlights</h2>
+
+      <!-- ADDED carousel-dark to make arrows visible on light background -->
+      <div id="galleryCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+        <div class="carousel-inner shadow-lg">
+          <div class="carousel-item active">
+            <img src="assets/activegal.jpeg" class="d-block w-100" alt="Art Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/gal1.jpeg" class="d-block w-100" alt="Art Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/gal2.jpeg" class="d-block w-100" alt="Art Image 3">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/gal3.jpeg" class="d-block w-100" alt="Art Image 4">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/gal4.jpeg" class="d-block w-100" alt="Art Image 5">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/gal5.jpeg" class="d-block w-100" alt="Art Image 6">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/gal6.jpeg" class="d-block w-100" alt="Art Image 7">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/gal7.jpeg" class="d-block w-100" alt="Art Image 8">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/gal8.jpeg" class="d-block w-100" alt="Art Image 9">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/gal9.jpeg" class="d-block w-100" alt="Art Image 10">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/gal10.jpeg" class="d-block w-100" alt="Art Image 11">
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="events" class="py-5" style="background: #fffdf8;">
+    <div class="container">
+      <div class="frosted-box p-5 rounded-4 shadow-sm bg-white" style="max-width: 800px; margin: 0 auto;">
+        <h2 class="text-center mb-5" style="color: #5c2d91;">
+          🌿 Upcoming Events
+        </h2>
+        
+        <div id="notices-container"></div>
+
+        <div class="event-item mb-4 pb-4 border-bottom mt-4">
+          <h5 class="fw-bold" style="color: #e91e63;">30 October - 1 November 2026</h5>
+          <h4 class="mt-2">Annual Art Exhibition</h4>
+          <p class="text-muted">
+            A beautiful showcase of our students' watercolor and acrylic masterpieces.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="admissions" class="py-5" style="background-color: #f1f8fc;">
+    <div class="container text-center">
+      <h2 class="mb-4">Admissions</h2>
+      <div style="max-width: 700px; margin: 0 auto;">
+        <p class="lead mb-4">
+          Interested in joining <span class="fw-semibold">KATHPENCIL Art Institute</span>?
+          Download the admission form below, take a printout, and submit it at our institute office.
+        </p>
+
+        <a href="assets/Kathpencil form.pdf" class="btn btn-lg" download
+          style="background-color: #6e7fff; color: white; font-weight: 700; border-radius: 8px; padding: 14px 28px; box-shadow: 0 4px 15px rgba(0, 119, 182, 0.4); border: none; opacity: 1; transition: all 0.3s ease;"
+          onmouseover="this.style.backgroundColor='#023e8a'; this.style.transform='translateY(-2px)';"
+          onmouseout="this.style.backgroundColor='#0077b6'; this.style.transform='translateY(0)';">
+          📄 Download Admission Form
+        </a>
+
+        <p class="mt-4 fst-italic text-muted" style="font-size: 14px;">
+          * Please ensure all details are filled clearly before submission.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer" class="text-light pt-5 pb-3">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="ratio ratio-4x3 rounded shadow-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.5843721969704!2d88.34491997534182!3d22.482247879556155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02718fb2aac723%3A0x511660fbf9562ead!2sKATHPENCIL%20Art%20%26%20Craft%20Academy!5e0!3m2!1sen!2sin!4v1754410692508!5m2!1sen!2sin"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="col-md-6 ps-md-5">
+          <h4 class="fw-semibold mb-4 text-white">Contact Us</h4>
+          <p><strong>Phone:</strong> +91 88203 47963 / +91 98369 35349</p>
+          <p><strong>Location:</strong> Wireless more, Kudghat, Kolkata, West Bengal 700040</p>
+
+          <h5 class="fw-semibold mt-5 mb-3 text-white">Quick Links</h5>
+          <ul class="list-unstyled d-flex gap-3 flex-wrap">
+            <li><a href="#about" class="text-light text-decoration-none border-bottom border-secondary pb-1">About</a>
+            </li>
+            <li><a href="#courses"
+                class="text-light text-decoration-none border-bottom border-secondary pb-1">Courses</a></li>
+            <li><a href="#gallery"
+                class="text-light text-decoration-none border-bottom border-secondary pb-1">Gallery</a></li>
+            <li><a href="#events" class="text-light text-decoration-none border-bottom border-secondary pb-1">Events</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="text-center border-top border-secondary pt-4 mt-5">
+        <p class="mb-0" style="color: #aaa;">© Made with 🎨 by Kathpencil Institute</p>
+      </div>
+    </div>
+  </footer>
+
+  <button onclick="topFunction()" id="scrollBtn" title="Go to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- MUST LOAD script.js FIRST so the Google callback function is defined -->
+  <script src="script.js"></script>
+  
+  <!-- Then load Google Translate API -->
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+</body>
+
+</html>
