@@ -1,0 +1,4 @@
+<!-- Save this as brush-accent.svg in your assets folder -->
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,30 C50,10 150,50 200,30" stroke="currentColor" stroke-width="12" fill="none" stroke-linecap="round" />
+</svg>
