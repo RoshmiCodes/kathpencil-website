@@ -20,8 +20,18 @@
 
 <body>
 
-  <!-- Pure CSS Floating Petals -->
+  <!-- Pure CSS Continuous Floating Petals -->
   <div class="petals-container">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
     <div class="petal"></div>
     <div class="petal"></div>
     <div class="petal"></div>
@@ -163,56 +173,15 @@
     </div>
   </section>
 
+  <!-- Gallery Section -->
   <section id="gallery" class="py-5 position-relative"
     style="background: rgba(255,255,255,0.5); backdrop-filter: blur(5px); z-index: 1;">
     <div class="container">
       <h2 class="text-center mb-5">Gallery Highlights</h2>
-
-      <!-- ADDED carousel-dark to make arrows visible on light background -->
-      <div id="galleryCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
-        <div class="carousel-inner shadow-lg">
-          <div class="carousel-item active">
-            <img src="assets/activegal.jpeg" class="d-block w-100" alt="Art Image 1">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/gal1.jpeg" class="d-block w-100" alt="Art Image 2">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/gal2.jpeg" class="d-block w-100" alt="Art Image 3">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/gal3.jpeg" class="d-block w-100" alt="Art Image 4">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/gal4.jpeg" class="d-block w-100" alt="Art Image 5">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/gal5.jpeg" class="d-block w-100" alt="Art Image 6">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/gal6.jpeg" class="d-block w-100" alt="Art Image 7">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/gal7.jpeg" class="d-block w-100" alt="Art Image 8">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/gal8.jpeg" class="d-block w-100" alt="Art Image 9">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/gal9.jpeg" class="d-block w-100" alt="Art Image 10">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/gal10.jpeg" class="d-block w-100" alt="Art Image 11">
-          </div>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
+      
+      <!-- Gallery content will be dynamically loaded here by script.js -->
+      <div id="gallery-container"></div>
+      
     </div>
   </section>
 
