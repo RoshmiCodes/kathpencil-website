@@ -12,7 +12,7 @@ function toggleTranslateDropdown() {
   el.style.display = (el.style.display === "none") ? "block" : "none";
 }
 
-// AOS Initialization
+// AOS Initialization and Fetch Calls
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof AOS !== 'undefined') {
     AOS.init({
@@ -23,9 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Fetch notices
   fetch('notices.json')
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) throw new Error('Notices fetch failed');
+        return response.json();
+    })
     .then(data => displayNotices(data))
-    .catch(error => console.error('Error loading notices:', error));
+    .catch(error => {
+        console.error('Error loading notices:', error);
+        const container = document.getElementById('notices-container');
+        if(container) container.innerHTML = '<p class="text-muted">No new notices at this time.</p>';
+    });
+    
+  // Fetch Gallery Data
+  fetch('gallery.json')
+    .then(response => {
+        if (!response.ok) throw new Error('Gallery fetch failed');
+        return response.json();
+    })
+    .then(data => displayGallery(data))
+    .catch(error => console.error('Error loading gallery:', error));
 });
 
 function displayNotices(notices) {
@@ -44,6 +60,50 @@ function displayNotices(notices) {
 
     container.appendChild(noticeDiv);
   });
+}
+
+function displayGallery(images) {
+  const container = document.getElementById('gallery-container');
+  if (!container) return;
+  
+  if (!images || images.length === 0) {
+    container.innerHTML = '<p class="text-center">No images found.</p>';
+    return;
+  }
+
+  // Build the entire carousel structure dynamically
+  let html = `
+    <div id="galleryCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+      <div class="carousel-inner shadow-lg">
+  `;
+
+  images.forEach((img, index) => {
+    const activeClass = index === 0 ? 'active' : '';
+    html += `
+      <div class="carousel-item ${activeClass}">
+        <div style="position: relative; overflow: hidden; border-radius: 20px;">
+          <img src="${img.src}" class="d-block w-100" alt="${img.alt}">
+          <div class="gallery-caption">
+            <h5>${img.title}</h5>
+            <p>${img.artist}</p>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  html += `
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  `;
+
+  container.innerHTML = html;
 }
 
 // Scroll to Top Button
